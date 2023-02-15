@@ -39,8 +39,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let computerSelection = getComputerChoice();
-
 const container = document.querySelector('#results-container');
 const rockBtn = document.getElementById('rock');    
 const paperBtn = document.getElementById('paper');
@@ -57,6 +55,7 @@ score.style.color = '#FAFAFA';
 container.appendChild(score);
 
 rockBtn.addEventListener('click', function() {
+    let computerSelection = getComputerChoice();
     result.textContent = playRound('rock', computerSelection);
     if(result.textContent.includes('won')) {
         playerScore++;
@@ -71,6 +70,7 @@ rockBtn.addEventListener('click', function() {
 })
 
 paperBtn.addEventListener('click', function() {
+    let computerSelection = getComputerChoice();
     result.textContent = playRound('paper', computerSelection);
     if(result.textContent.includes('won')) {
         playerScore++;
@@ -85,6 +85,7 @@ paperBtn.addEventListener('click', function() {
 })
 
 scissors.addEventListener('click', function() {
+    let computerSelection = getComputerChoice();
     result.textContent = playRound('scissors', computerSelection);
     if(result.textContent.includes('won')) {
         playerScore++;
